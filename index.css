@@ -167,11 +167,23 @@ header nav ul li {
 .hero {
   height: 50vh;
   background-color: #0093f3;
+  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   position: relative;
+  animation: translate-hero 3s ease;
 }
 
+@keyframes translate-hero {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .hero .hero-Text h1 {
   font-size: 50px;
   margin-left: 5em;
@@ -234,10 +246,38 @@ header nav ul li {
   font-size: 20px;
 }
 
-.main-content .container-workout-info .info {
+.main-content .container-workout-info .info > p {
   line-height: 26px;
+  background-color: #0093f3;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 500ms ease;
+  color: white;
+}
+.main-content .container-workout-info .info > p:hover {
+  background-color: #0281d6;
 }
 
 .main-content .container-workout-info .info strong {
   font-weight: bold;
+  color: black;
+}
+
+.main-content .container-workout-info .Cycle-Day {
+  line-height: 26px;
+  border: 10px solid #0093f3;
+  border-radius: 200px;
+  width: 5em;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-content .container-workout-info .Cycle-Day strong {
+  font-weight: bold;
+}
+
+.main-content .container-workout-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5em;
 }/*# sourceMappingURL=index.css.map */

@@ -1,11 +1,25 @@
 .hero {
   height: 50vh;
   background-color: $bgPrimary-color;
+  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   @include position(relative, null, null, null, null);
-  //@include margin("inline", 12em);
+  animation: translate-hero 3s ease;
 }
+
+@keyframes translate-hero {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .hero .hero-Text h1 {
   @include font("size", 50px);
   @include margin("left", 5em);
@@ -48,9 +62,34 @@
   font-weight: $Grassetto;
   @include font("size", 20px);
 }
-.main-content .container-workout-info .info {
+.main-content .container-workout-info .info > p {
   line-height: 26px;
+  background-color: $bgPrimary-color;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 500ms ease;
+  color: $text-color-clear;
+  &:hover {
+    background-color: #0281d6;
+  }
 }
 .main-content .container-workout-info .info strong {
   font-weight: $Grassetto;
+  color: $text-color-dark;
+}
+.main-content .container-workout-info .Cycle-Day {
+  line-height: 26px;
+  border: 10px solid $color-Primary;
+  border-radius: 200px;
+  width: 5em;
+  text-align: center;
+  padding: 20px;
+}
+.main-content .container-workout-info .Cycle-Day strong {
+  font-weight: $Grassetto;
+}
+.main-content .container-workout-info {
+  display: flex;
+  justify-content: space-around;
+  @include margin("top", 5em);
 }
