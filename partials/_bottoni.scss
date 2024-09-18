@@ -1,0 +1,8 @@
+@mixin button-sfondo-blu {
+  color: $color-Primary;
+  background-color: white;
+  padding: 10px;
+  border: 2px solid $color-Primary;
+  border-radius: 10px;
+  cursor: pointer;
+}

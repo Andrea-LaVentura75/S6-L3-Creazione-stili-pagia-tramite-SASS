@@ -1,0 +1,25 @@
+@mixin margin($property, $value) {
+  margin-#{$property}: $value;
+}
+@mixin padding($property, $value) {
+  padding-#{$property}: $value;
+}
+@mixin position($property, $top: null, $right: null, $bottom: null, $left: null) {
+  position: #{$property};
+
+  @if $top != null {
+    top: #{$top};
+  }
+
+  @if $right != null {
+    right: #{$right};
+  }
+
+  @if $bottom != null {
+    bottom: #{$bottom};
+  }
+
+  @if $left != null {
+    left: #{$left};
+  }
+}

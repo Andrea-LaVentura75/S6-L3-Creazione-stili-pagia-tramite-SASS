@@ -1,0 +1,31 @@
+body {
+  @include font("family", "roboto");
+  @include padding("inline", 12em);
+}
+header {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  //@include margin("inline", 12em);
+}
+header img {
+  width: 7em;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: end;
+}
+header nav ul li {
+  margin-right: 20px;
+  padding: 5px;
+  cursor: pointer;
+  @include font("family", "roboto");
+  color: $color-Primary;
+  border: 2px solid $color-Primary;
+  border-radius: 5px;
+}

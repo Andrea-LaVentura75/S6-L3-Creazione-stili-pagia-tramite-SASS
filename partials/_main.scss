@@ -1,0 +1,56 @@
+.hero {
+  height: 50vh;
+  background-color: $bgPrimary-color;
+  display: flex;
+  justify-content: space-around;
+  @include position(relative, null, null, null, null);
+  //@include margin("inline", 12em);
+}
+.hero .hero-Text h1 {
+  @include font("size", 50px);
+  @include margin("left", 5em);
+  @include padding("top", 1em);
+  font-weight: $Grassetto;
+  line-height: 66px;
+  letter-spacing: 1px;
+}
+.hero .hero-Text > p {
+  @include position(absolute, 10em, null, null, 18em);
+  color: $text-color-clear;
+  @include font("size", 20px);
+}
+.hero .hero-Text button {
+  @include position(absolute, 18em, null, null, 36em);
+  @include button-sfondo-blu();
+}
+.hero .hero-Text .info-user {
+  display: flex;
+  @include position(absolute, 25em, null, null, 25em);
+}
+.hero .hero-Text .info-user .info {
+  @include margin("right", 3rem);
+}
+.hero .hero-Text .info-user .info h4 {
+  font-weight: $Grassetto;
+}
+.hero .hero-Text .info-user .info > p {
+  color: $text-color-clear;
+}
+.hero img {
+  @include padding("top", 1em);
+  width: 27em;
+  height: 27em;
+  border-radius: 50%;
+}
+.main-content h2 {
+  text-align: center;
+  @include padding("top", 2em);
+  font-weight: $Grassetto;
+  @include font("size", 20px);
+}
+.main-content .container-workout-info .info {
+  line-height: 26px;
+}
+.main-content .container-workout-info .info strong {
+  font-weight: $Grassetto;
+}
